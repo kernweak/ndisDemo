@@ -1,0 +1,404 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\FirewallDemo.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\main.ico"
+IDR_MONITOR             ICON    DISCARDABLE     "res\\CONFIG.ICO"
+IDR_EXIT                ICON    DISCARDABLE     "res\\EXIT.ICO"
+IDR_CONFIG              ICON    DISCARDABLE     "res\\Filter.ico"
+IDI_HELP                ICON    DISCARDABLE     "res\\HELP.ICO"
+IDI_HIDE                ICON    DISCARDABLE     "res\\Hide.ico"
+IDI_LOG                 ICON    DISCARDABLE     "res\\log.ico"
+IDI_LOGO                ICON    DISCARDABLE     "res\\LOGO.ICO"
+IDI_REG                 ICON    DISCARDABLE     "res\\REG.ICO"
+IDI_TEEN                ICON    DISCARDABLE     "res\\teen.ico"
+IDR_UPDATE              ICON    DISCARDABLE     "res\\UPDATE.ICO"
+IDI_UPDATEITEM          ICON    DISCARDABLE     "res\\updateitem.ico"
+IDR_NETSTATE            ICON    DISCARDABLE     "res\\netstate.ico"
+IDR_NULLAPP             ICON    DISCARDABLE     "res\\NullApp.ico"
+IDI_DENY_ALL            ICON    DISCARDABLE     "res\\Red_logo.ico"
+IDI_PASS_ALL            ICON    DISCARDABLE     "res\\Green_logo.ico"
+IDI_FILTER              ICON    DISCARDABLE     "res\\Orange_logo.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_FIREWALLDEMO_DIALOG DIALOGEX 0, 0, 284, 178
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,7,7,270,42
+    PUSHBUTTON      "网络状态",IDC_NETSTATE,9,9,38,37
+    PUSHBUTTON      "配置",IDC_CONFIG,85,9,38,37
+    PUSHBUTTON      "隐藏",IDC_HIDE,161,9,38,37
+    PUSHBUTTON      "日志",IDC_LOG,123,9,38,37
+    PUSHBUTTON      "退出",IDOK,199,9,38,37
+    PUSHBUTTON      "帮助",IDC_SHOWHELP,237,9,38,37
+    PUSHBUTTON      "监控",IDC_MONITOR,47,9,38,37
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,7,50,270,121
+    LTEXT           "",IDC_FRAME,8,51,267,100
+    LTEXT           "Copyright(C) 2006.1",IDC_URL,107,158,81,13,
+                    SS_CENTERIMAGE
+    PUSHBUTTON      "",IDC_RED,222,153,17,15
+    PUSHBUTTON      "",IDC_YELLOW,239,153,17,15
+    PUSHBUTTON      "",IDC_GREEN,257,153,17,15
+END
+
+IDD_NETSTATE DIALOG DISCARDABLE  0, 0, 269, 100
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "",IDC_NETSTATE,0,0,269,100
+END
+
+IDD_MONITOR DIALOG DISCARDABLE  0, 0, 268, 100
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List1",IDC_LIST_RULE,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_NOLABELWRAP | WS_BORDER | WS_TABSTOP,
+                    0,15,268,85
+    PUSHBUTTON      "Delete",IDC_DELETE,233,2,29,11
+    PUSHBUTTON      "Add",IDC_ADD,203,2,29,11
+END
+
+IDD_CONFIG DIALOG DISCARDABLE  0, 0, 267, 100
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "系统设置",IDC_STATIC,7,5,253,87
+    CONTROL         "Windows 启动时自动启动",IDC_SYSTEM_SET_CHECK_AUTOSTART,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,19,102,10
+    CONTROL         "不返回拦截数据包",IDC_SYSTEM_SET_CHECK_LOG,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,33,80,10
+    CONTROL         "除了允许都禁止通过",IDC_SYSTEM_SET_CHECK_MODE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,135,19,86,10
+    CONTROL         "拦截时闪烁图标报警",IDC_SYSTEM_SET_CHECK_ALERT_DIALOG,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,61,86,10
+    CONTROL         "拦截时发出报警声音",
+                    IDC_SYSTEM_SET_CHECK_ALERT_PCSPEAKER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,47,85,10
+    CONTROL         "禁止所有TCP包通过",IDC_SYSTEM_SET_CHECK_DENYTCP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,135,33,85,10
+    CONTROL         "禁止所有ICMP包通过",IDC_SYSTEM_SET_CHECK_DENYICMP,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,135,61,90,10
+    CONTROL         "禁止所有UDP包通过",IDC_SYSTEM_SET_CHECK_DENYUDP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,135,47,82,10
+    PUSHBUTTON      "应用",IDAPPLY,155,75,45,13
+    PUSHBUTTON      "撤销",IDCANCEL,209,75,45,13
+END
+
+IDD_LOG DIALOG DISCARDABLE  0, 0, 270, 100
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List1",IDC_LOG,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,1,0,269,100
+END
+
+IDD_RULE_ADD DIALOGEX 0, 0, 195, 238
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 10, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "IPAddress1",IDC_CTRL_SOUR_IP,"SysIPAddress32",
+                    WS_TABSTOP,43,27,70,12
+    CONTROL         "IPAddress1",IDC_CTRL_SOUR_MASK,"SysIPAddress32",
+                    WS_TABSTOP,43,41,70,12
+    EDITTEXT        IDC_EDIT_SOUR_PORT,146,33,26,12,ES_AUTOHSCROLL
+    CONTROL         "IPAddress1",IDC_CTRL_DIST_IP,"SysIPAddress32",
+                    WS_TABSTOP,43,65,70,12
+    CONTROL         "IPAddress1",IDC_CTRL_DIST_MASK,"SysIPAddress32",
+                    WS_TABSTOP,43,79,70,12
+    EDITTEXT        IDC_EDIT_DIST_PORT,146,69,26,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_DIRECTION,52,103,45,76,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_PROTOCAL,126,103,45,96,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_ACTION,52,121,45,79,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_MEMO,43,143,134,26,ES_AUTOHSCROLL
+    PUSHBUTTON      "APPLY",IDAPPLY,102,221,40,12
+    PUSHBUTTON      "CANCEL",IDCANCEL,146,220,40,12
+    GROUPBOX        "     控管规则",IDC_LABEL_BASE,6,4,181,173
+    LTEXT           "IP地址:",IDC_STATIC,14,30,28,10
+    LTEXT           "IP掩码:",IDC_STATIC,15,44,28,10
+    LTEXT           "端口:",IDC_STATIC,124,36,20,10
+    LTEXT           "端口:",IDC_STATIC,124,72,20,10
+    LTEXT           "连线方向:",IDC_STATIC,14,106,35,10
+    LTEXT           "管制动作:",IDC_STATIC,14,123,35,10
+    LTEXT           "协议:",IDC_STATIC,102,106,22,10
+    LTEXT           "备注:",IDC_STATIC,14,140,22,10
+    GROUPBOX        "注释：",IDC_STATIC,6,183,181,33
+    ICON            IDR_NULLAPP,IDC_APP_ICON,10,2,20,20
+    LTEXT           "IP地址:",IDC_STATIC,14,68,28,10
+    LTEXT           "IP掩码:",IDC_STATIC,14,81,28,10
+    GROUPBOX        "服务端",IDC_STATIC,10,19,170,37,0,WS_EX_TRANSPARENT
+    GROUPBOX        "客户端",IDC_STATIC,10,56,170,38
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_FIREWALLDEMO_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 277
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 171
+    END
+
+    IDD_RULE_ADD, DIALOG
+    BEGIN
+        RIGHTMARGIN, 194
+        TOPMARGIN, 2
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU DISCARDABLE 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "主界面(&C)",                  ID_MAINFRAME
+        MENUITEM SEPARATOR
+        MENUITEM "放行所有(&P)",                ID_PASSALL
+        MENUITEM "过滤(&F)",                    ID_FILTER
+        MENUITEM "拒绝所有(&D)",                ID_DENYALL
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                    ID_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_YELLOW_FOCUS        BITMAP  DISCARDABLE     "res\\BITMAP9.bmp"
+IDB_YELLOW_NORMAL       BITMAP  DISCARDABLE     "res\\bitmap10.bmp"
+IDB_YELLOW_SELECT       BITMAP  DISCARDABLE     "res\\bitmap11.bmp"
+IDB_GREEN_FOCUS         BITMAP  DISCARDABLE     "res\\BITMAP3.bmp"
+IDB_GREEN_NORMAL        BITMAP  DISCARDABLE     "res\\BITMAP4.bmp"
+IDB_RED_FOCUS           BITMAP  DISCARDABLE     "res\\BITMAP6.bmp"
+IDB_RED_NORMAL          BITMAP  DISCARDABLE     "res\\BITMAP7.bmp"
+IDB_RED_SELECT          BITMAP  DISCARDABLE     "res\\bitmap8.bmp"
+IDB_GREEN_SELECT        BITMAP  DISCARDABLE     "res\\bitmap5.bmp"
+IDB_SPLASH              BITMAP  DISCARDABLE     "res\\Snap1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About FirewallDemo..."
+    IDS_APP_NAME            "NDIS Intermediate Driver Firewall "
+    IDS_COMPANY_URL         "http://www.xiaoqiang.com"
+    IDS_INFO_ALREADY_RUN    "程序已有一副本正在运行。"
+    IDS_ERROR_OPEN_HELP     "无法打开帮助文件！"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About FirewallDemo"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "FirewallDemo Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2006",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "FirewallDemo MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "FirewallDemo\0"
+            VALUE "LegalCopyright", "Copyright (C) 2006\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "FirewallDemo.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "FirewallDemo Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\FirewallDemo.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

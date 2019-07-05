@@ -1,0 +1,58 @@
+#ifndef COMMON_H
+#define COMMON_H
+
+#include <Winnetwk.h>
+
+#include "condef.h"
+#include "fw_log.h"
+#include "io.h"
+
+#ifndef FIREWALL_COMMON
+#define FIREWALL_COMMON
+
+#define IO_GET_SHAREMEMORY_ADDR		CTL_CODE(FILE_DEVICE_UNKNOWN, 0x925, METHOD_BUFFERED, FILE_ANY_ACCESS)
+#define IO_REFERENCE_EVENT		    CTL_CODE(FILE_DEVICE_UNKNOWN, 0x926, METHOD_NEITHER , FILE_ANY_ACCESS) 
+#define IO_STOP_MONITOR_EVENT		CTL_CODE(FILE_DEVICE_UNKNOWN, 0x927, METHOD_NEITHER , FILE_ANY_ACCESS)
+#define IO_PASS_ALL					CTL_CODE(FILE_DEVICE_UNKNOWN, 0x928, METHOD_NEITHER , FILE_ANY_ACCESS)
+#define IO_DENY_ALL					CTL_CODE(FILE_DEVICE_UNKNOWN, 0x929, METHOD_NEITHER , FILE_ANY_ACCESS)
+#define	IO_SET_EVENT				CTL_CODE(FILE_DEVICE_UNKNOWN, 0x920, METHOD_NEITHER, FILE_ANY_ACCESS)
+#define	IO_CLEAR_EVENT				CTL_CODE(FILE_DEVICE_UNKNOWN, 0x931, METHOD_BUFFERED, FILE_ANY_ACCESS)
+#define	IO_QUERY_EVENT_STATE		CTL_CODE(FILE_DEVICE_UNKNOWN, 0x932, METHOD_NEITHER, FILE_ANY_ACCESS)
+#define IO_ADD_RULE                 CTL_CODE(FILE_DEVICE_UNKNOWN, 0x933, METHOD_BUFFERED, FILE_ANY_ACCESS)
+#define IO_DEL_RULE                 CTL_CODE(FILE_DEVICE_UNKNOWN, 0x934, METHOD_BUFFERED, FILE_ANY_ACCESS)
+#define IO_ADD_CONFIG               CTL_CODE(FILE_DEVICE_UNKNOWN, 0x935, METHOD_BUFFERED, FILE_ANY_ACCESS)
+#define IO_CLEAR_RULES              CTL_CODE(FILE_DEVICE_UNKNOWN, 0x936, METHOD_NEITHER, FILE_ANY_ACCESS)
+#define IO_GET_Stat                 CTL_CODE(FILE_DEVICE_UNKNOWN, 0x937, METHOD_BUFFERED, FILE_ANY_ACCESS)
+
+#endif
+
+#ifdef GUI_COMMON_FUNCTION
+
+CString GetAppPath(BOOL IsDLL, HINSTANCE instance, BOOL IsFullPathName); 
+
+CString WINAPI DIPToSIP(DWORD* pIP);
+
+void WINAPI AddComboStrings(CComboBox* pCombo, TCHAR** pString, int nCount);
+
+void WINAPI AddListHead(CListCtrl* pListCtrl, TCHAR** pString, int nCount, int* ppLenth = NULL);
+
+int WINAPI AddList(
+			CListCtrl *pList, 
+			const TCHAR** pString, 
+			int nCount, 
+			BOOL bIsSelect = FALSE, 
+			BOOL bIsEdit = FALSE, 
+			int iIndex = -1, 
+			int iIcon = -1
+			);
+
+void AddApp(CListCtrl* pList, Log* pLog, int nMaxCount = 1000, BOOL IsSeleted = TRUE, BOOL IsShowDate = FALSE);
+
+void AddLog(CListCtrl *pList, LPCTSTR* pString, int nCount, int nMaxCount = 1000, BOOL IsSeleted = TRUE);
+
+
+#endif// GUI_COMMON_FUNCTION
+
+#endif
+
+

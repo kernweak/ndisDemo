@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xp_passthru", "xp_passthru.vcproj", "{DEECF801-419D-4412-86F0-F8E19F49CF7F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DEECF801-419D-4412-86F0-F8E19F49CF7F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DEECF801-419D-4412-86F0-F8E19F49CF7F}.Debug|Win32.Build.0 = Debug|Win32
+		{DEECF801-419D-4412-86F0-F8E19F49CF7F}.Release|Win32.ActiveCfg = Release|Win32
+		{DEECF801-419D-4412-86F0-F8E19F49CF7F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
